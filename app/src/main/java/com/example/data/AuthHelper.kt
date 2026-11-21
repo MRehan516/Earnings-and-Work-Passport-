@@ -131,6 +131,22 @@ fun onGoogleSignInClicked(
     }
 }
 
+fun signInAnonymouslyForDemo(
+    onAuthSuccess: () -> Unit,
+    onAuthError: (String) -> Unit,
+    scope: CoroutineScope
+) {
+    scope.launch {
+        try {
+            Firebase.auth.signInAnonymously().await()
+            onAuthSuccess()
+        } catch (e: Exception) {
+            Log.e(AUTH_TAG, "Anonymous sign-in failed", e)
+            onAuthError(e.localizedMessage ?: "Demo sign-in failed")
+        }
+    }
+}
+
 fun signOutGoogle(
     credentialManager: CredentialManager,
     scope: CoroutineScope,

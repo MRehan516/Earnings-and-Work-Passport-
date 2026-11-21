@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.credentials.CredentialManager
 import com.example.data.attemptAutoSignIn
 import com.example.data.onGoogleSignInClicked
+import com.example.data.signInAnonymouslyForDemo
 import com.example.domain.rules.CounterpartyConfirmationRules
 import com.example.model.EvidenceStatus
 import com.example.ui.components.EvidenceBadge
@@ -218,6 +219,39 @@ fun AuthScreen(
                                 style = MaterialTheme.typography.labelLarge
                             )
                         }
+                    }
+
+                    Spacer(Modifier.height(10.dp))
+
+                    OutlinedButton(
+                        onClick = {
+                            errorMessage = null
+                            isLoading = true
+                            signInAnonymouslyForDemo(
+                                onAuthSuccess = {
+                                    isLoading = false
+                                    onAuthSuccess()
+                                },
+                                onAuthError = { msg ->
+                                    isLoading = false
+                                    errorMessage = msg
+                                },
+                                scope = scope
+                            )
+                        },
+                        enabled = !isLoading,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp)
+                            .testTag("demo_guest_sign_in_button"),
+                        shape = RoundedCornerShape(12.dp),
+                        border = BorderStroke(1.dp, InkPrimary)
+                    ) {
+                        Text(
+                            text = "⚡ Instant Demo / Guest Mode (No Login)",
+                            style = MaterialTheme.typography.labelLarge,
+                            color = InkPrimary
+                        )
                     }
                 }
 
