@@ -1,0 +1,12 @@
+# Integration Feasibility Register
+
+*Verified on 20 Nov 2026*
+
+| Source | Route | Verified on 20 Nov 2026 | Still Unknown | Fallback | Next Action |
+|---|---|---|---|---|---|
+| **Upwork** | GraphQL API, OAuth | Key requires identity verification, ≥ $25,000 lifetime earnings/spend, good standing; API is personal/internal use only; commercial use not supported; no sandbox; 40,000 requests/day limit. [Upwork API Guide](https://support.upwork.com/hc/en-us/articles/115015857647-How-to-request-an-API-key-from-Upwork) | Whether a commercial partnership is available to a startup; exact earnings fields; retention terms | Worker uploads Upwork earnings reports (PDF/CSV) | Email Upwork partnerships |
+| **Swiggy** | MCP / API (Builders Club) | 3 MCP servers (Food, Instamart, Dineout), invite-based, India-only, commerce use. [Swiggy MCP Docs](https://mcp.swiggy.com/builders/docs/start/what-is-swiggy-mcp/) | Any delivery-partner earnings access | Statement upload (PDF) | Ask via Swiggy contact / mentors |
+| **Zomato (Eternal)** | Unknown | No public API for delivery-partner earnings found in ecosystem search | Everything regarding external access | Statement upload (PDF) | Ask a mentor / platform contact |
+| **Banks** | Account Aggregator (AA) | FIU must be registered and regulated by a financial regulator. [Sahamati FIU](https://sahamati.org.in/fiu/) · RBI AA Directions: [RBI Master Directions](https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=12936) | Partner model for a non-regulated early startup | Bank statement upload (CSV/PDF) | Consult mentor on regulated TSP/FIU partner for pilot |
+| **e-Shram / Social Security Rules 2026** | Government portal | Aggregators must submit worker data via API / electronic means; Aadhaar-linked worker ID. [Social Security Rules 2026](https://prsindia.org/billtrack/the-social-security-central-rules-2026) | Whether any earnings data is accessible to third parties | Not needed for MVP (focus on direct platform/client receipts) | Engage labor ministry / legal contacts |
+| **DPDP Act (Digital Personal Data Protection)** | Indian Law | Notified 13 Nov 2025; consent-manager rules from 13 Nov 2026; main duties from 13 May 2027; older rules apply until then. [DPDP Analysis](https://www.jsalaw.com/wp-content/uploads/2025/11/JSA-Prism-InfoTech-November-2025-DPDP-Rules.Final_.pdf) | Specific compliance mandates as a data fiduciary | Build consent revocation, purpose-limited sharing, data minimization upfront | Formal legal review before handling production data |

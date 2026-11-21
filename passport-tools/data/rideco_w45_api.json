@@ -1,0 +1,10 @@
+{
+  "external_id": "RC-45-001",
+  "week_start": "2026-11-02",
+  "week_end": "2026-11-08",
+  "gross": 9500,
+  "deductions": 700,
+  "net": 8800,
+  "payout_date": "2026-11-10",
+  "status": "paid"
+}
